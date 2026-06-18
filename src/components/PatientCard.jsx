@@ -7,7 +7,7 @@ function PatientCard({ patient, onDelete }) {
       <div className="card-body">
         {patient.name}
 
-        <button onClick={onDelete}>
+        <button   className="btn btn-primary mb-3" onClick={onDelete}>
           Delete
         </button>
       </div>
