@@ -12,6 +12,7 @@ const patients = [
   { id: 10, name: "Ava Martin" },
   { id: 11, name: "Mia Garcia" },
   { id: 12, name: "Lucas White" },
+
 ];
 
 export default patients;

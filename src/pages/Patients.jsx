@@ -10,7 +10,7 @@ function Patients() {
   const handleSearch = useCallback((e) => {
     setSearch(e.target.value);
   }, []);
-
+ 
   const handleButtonClick = useCallback(() => {
     alert("useCallback Example");
   }, []);
@@ -54,6 +54,8 @@ function Patients() {
         <PatientCard
           key={patient.id}
           patient={patient}
+            onDelete={handleButtonClick}
+
         />
       ))}
     </>
