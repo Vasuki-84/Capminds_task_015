@@ -11,9 +11,9 @@ function Patients() {
     setSearch(e.target.value);
   }, []);
  
-  const handleButtonClick = useCallback(() => {
-    alert("useCallback Example");
-  }, []);
+ const handleButtonClick = useCallback((name) => {
+  alert(name);
+}, []);
 
   const filteredPatients = useMemo(() => {
     console.log("Filtering Patients");
@@ -41,12 +41,6 @@ function Patients() {
             onChange={handleSearch}
           />
 
-          <button
-            className="btn btn-primary mb-3"
-            onClick={handleButtonClick}
-          >
-            Test useCallback
-          </button>
         </div>
       </div>
 
@@ -54,7 +48,7 @@ function Patients() {
         <PatientCard
           key={patient.id}
           patient={patient}
-            onDelete={handleButtonClick}
+            onView={handleButtonClick}
 
         />
       ))}
